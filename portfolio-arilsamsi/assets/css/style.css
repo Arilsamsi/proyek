@@ -3,7 +3,7 @@
 
 /* ----- VARIABLES ----- */
 :root {
-  --body-color: rgb(250, 250, 250);
+  /* --body-color: rgb(250, 250, 250); */
   --color-white: rgb(255, 255, 255);
 
   --text-color-second: rgb(68, 68, 68);
@@ -15,6 +15,13 @@
   --second-color: rgb(0, 201, 255);
   --third-color: rgb(192, 166, 49);
   --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
 }
 
 /* ----- BASE ----- */
@@ -73,7 +80,8 @@ i {
 
 /* ------- BASE -------- */
 body {
-  background: var(--body-color);
+  background: var(--base-color);
+  color: var(--text-color);
 }
 .container {
   width: 100%;
@@ -88,7 +96,7 @@ nav {
   width: 100%;
   height: 90px;
   line-height: 90px;
-  background: var(--body-color);
+  background: var(--base-color);
   padding-inline: 9vw;
   transition: 0.3s;
   z-index: 100;
@@ -208,6 +216,7 @@ nav {
   display: flex;
   margin-top: 5em;
   gap: 30px;
+  color: white;
 }
 .icon {
   display: flex;
@@ -218,6 +227,7 @@ nav {
   border-radius: 50%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  background-color: whitesmoke;
 }
 .icon:hover {
   color: var(--first-color);
@@ -635,4 +645,35 @@ footer {
   .input-field {
     width: 100%;
   }
+}
+.darkmode {
+  --base-color: black;
+  --base-variant: black;
+  --text-color: white;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
 }
