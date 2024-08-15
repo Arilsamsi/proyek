@@ -109,8 +109,7 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-// Switch Theme
-
+//Switch Theme
 let darkmode = localStorage.getItem("darkmode");
 const themeSwitch = document.getElementById("theme-switch");
 
