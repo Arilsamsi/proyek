@@ -64,6 +64,7 @@ html {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.4s;
+  right: 85px;
 }
 .btn > i {
   margin-left: 10px;
@@ -468,6 +469,7 @@ h3 {
   display: flex;
   gap: 10px;
   width: 100%;
+  color: white;
 }
 .input-field {
   width: 50%;
@@ -477,6 +479,7 @@ h3 {
   border-radius: 10px;
   padding-inline: 20px;
   outline: none;
+  color: var(--text-color);
 }
 textarea {
   width: 100%;
@@ -487,6 +490,7 @@ textarea {
   padding: 15px 20px;
   outline: none;
   resize: none;
+  color: var(--text-color);
 }
 .form-button > .btn {
   display: flex;
@@ -554,6 +558,7 @@ footer {
 @media only screen and (max-width: 900px) {
   .nav-button {
     display: none;
+    right: 85px;
   }
   .nav-menu.responsive {
     left: 0;
@@ -664,6 +669,8 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  position: fixed;
+  right: 90px;
 }
 #theme-switch svg {
   fill: var(--primary-color);
