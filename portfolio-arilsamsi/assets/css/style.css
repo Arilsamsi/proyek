@@ -65,6 +65,7 @@ html {
   cursor: pointer;
   transition: 0.4s;
   right: 85px;
+  position: fixed;
 }
 .btn > i {
   margin-left: 10px;
