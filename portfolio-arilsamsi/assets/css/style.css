@@ -558,7 +558,6 @@ footer {
 @media only screen and (max-width: 900px) {
   .nav-button {
     display: none;
-    right: 85px;
   }
   .nav-menu.responsive {
     left: 0;
@@ -664,23 +663,26 @@ footer {
   width: 50px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--base-variant);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   position: fixed;
-  right: 90px;
+  right: 50px;
 }
 #theme-switch svg {
   fill: var(--primary-color);
+  position: fixed;
 }
 #theme-switch svg:last-child {
   display: none;
+  position: fixed;
 }
 .darkmode #theme-switch svg:first-child {
   display: none;
+  position: fixed;
 }
 .darkmode #theme-switch svg:last-child {
   display: block;
+  position: fixed;
 }
