@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR GENERATOR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p>GENERATE YOU'R QR</p>
+      <input type="text" id="qrText" placeholder="Masukan text" />
+
+      <div id="qrBox">
+        <img src="" id="qrImage" />
+      </div>
+
+      <button onclick="generateQR()">Generate QR Code</button>
+    </div>
+
+    <script>
+      let qrBox = document.getElementById("qrBox");
+      let qrText = document.getElementById("qrText");
+      let qrImage = document.getElementById("qrImage");
+
+      function generateQR() {
+        if (qrText.value.length > 0) {
+          qrImage.src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+            qrText.value;
+          qrBox.classList.add("show-img");
+        }
+      }
+    </script>
+  </body>
+</html>
