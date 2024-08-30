@@ -1,1 +1,2 @@
-"# portfolio" 
+ini adalah beberapa proyek saya
+
