@@ -676,6 +676,8 @@ footer {
   margin-top: 20px;
   position: fixed;
   right: 50px;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 #theme-switch svg {
   fill: var(--primary-color);
@@ -692,4 +694,12 @@ footer {
 .darkmode #theme-switch svg:last-child {
   display: block;
   position: fixed;
+}
+.btn svg {
+  position: fixed;
+  margin-bottom: 5px;
+}
+.text-msg {
+  resize: both;
+  overflow: hidden;
 }

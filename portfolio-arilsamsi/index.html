@@ -19,9 +19,15 @@
     <!-- --------- FAVICON ---------- -->
     <link
       rel="shortcut icon"
-      href="assets/images/Black & White Minimalist Signature Personal Brand Logo.png"
+      href="assets/images/icon.png"
       type="image/x-icon"
     />
+
+    <!-- Boxicon -->
+    <head>
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
 
     <title>Ahmad Aril Samsi | Portofolio</title>
   </head>
@@ -52,7 +58,7 @@
               <div class="circle"></div>
             </li>
           </ul>
-          <button id="theme-switch" class="btn" style="position: fixed">
+          <button id="theme-switch" class="btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -228,6 +234,9 @@
             <a href="https://pembuat-qr.vercel.app" class="project-box">
               <img src="assets/images/proyek/proyek3.png" alt="" width="100%" />
             </a>
+            <a href="https://daftartugas.vercel.app/" class="project-box">
+              <img src="assets/images/proyek/proyek4.png" alt="" width="100%" />
+            </a>
             <div class="project-box">
               <i class="bx bx-dots-vertical-rounded"></i>
               <h3>See More</h3>
@@ -255,20 +264,22 @@
               </div>
             </div>
             <div class="col">
-              <div class="form-control">
-                <div class="form-inputs">
-                  <input type="text" class="input-field" placeholder="Name" />
-                  <input type="text" class="input-field" placeholder="Email" />
+              <form action="" method="post">
+                <div class="form-control">
+                  <div class="form-inputs">
+                    <input type="text" class="input-field" placeholder="Name" />
+                    <input type="text" class="input-field" placeholder="Email" />
+                  </div>
+                  <div class="text-area">
+                    <textarea class="text-msg" placeholder="Message"></textarea>
+                  </div>
+                  <div class="form-button">
+                    <button class="btn">
+                      Send <i class="uil uil-message"></i>
+                    </button>
+                  </div>
                 </div>
-                <div class="text-area">
-                  <textarea placeholder="Message"></textarea>
-                </div>
-                <div class="form-button">
-                  <button class="btn">
-                    Send <i class="uil uil-message"></i>
-                  </button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
@@ -323,7 +334,9 @@
         </div>
       </footer>
     </div>
-
+    <div class="up">
+      <a href="#home"><i class='bx bxs-to-top'></i></a>
+    </div>
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
