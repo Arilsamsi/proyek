@@ -29,7 +29,7 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
 
-    <title>Ahmad Aril Samsi | Portofolio</title>
+    <title>Ahmad Aril Samsi | Portfolio</title>
   </head>
   <body>
     <div class="container">
@@ -231,7 +231,7 @@
             <a href="https://rplsmklimboto.vercel.app/" class="project-box">
               <img src="assets/images/proyek/proyek2.png" alt="" width="100%" />
             </a>
-            <a href="https://pembuat-qr.vercel.app" class="project-box">
+            <a href="https://pembuat-qr.vercel.app/" class="project-box">
               <img src="assets/images/proyek/proyek3.png" alt="" width="100%" />
             </a>
             <a href="https://daftartugas.vercel.app/" class="project-box">
@@ -264,22 +264,22 @@
               </div>
             </div>
             <div class="col">
-              <form action="" method="post">
+              <!-- <form action=""> -->
                 <div class="form-control">
                   <div class="form-inputs">
-                    <input type="text" class="input-field" placeholder="Name" />
-                    <input type="text" class="input-field" placeholder="Email" />
+                    <input id="myForm" type="text" class="input-field" placeholder="Name" />
+                    <input id="Email" type="email" class="input-field" placeholder="Email" required/>
                   </div>
                   <div class="text-area">
-                    <textarea class="text-msg" placeholder="Message"></textarea>
+                    <textarea id="textArea" class="text-msg" placeholder="Message"></textarea>
                   </div>
                   <div class="form-button">
-                    <button class="btn">
+                    <button onclick="SEND()" class="btn">
                       Send <i class="uil uil-message"></i>
                     </button>
                   </div>
                 </div>
-              </form>
+              <!-- </form> -->
             </div>
           </div>
         </section>
@@ -340,10 +340,29 @@
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- ----- SCROLL REVEAL JS Link----- -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+      function SEND(){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Pesan berhasil dikirim!!",
+          showConfirmButton: true,
+          timer: 2500
+        });
+
+        document.getElementById('myForm').value = '';
+        document.getElementById('Email').value = '';
+        document.getElementById('textArea').value = '';
+      }
+    </script>
   </body>
 </html>
