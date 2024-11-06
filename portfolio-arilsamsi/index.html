@@ -237,6 +237,9 @@
             <a href="https://daftartugas.vercel.app/" class="project-box">
               <img src="assets/images/proyek/proyek4.png" alt="" width="100%" />
             </a>
+            <a href="https://maniacmovie.vercel.app/" class="project-box">
+              <img src="assets/images/proyek/proyek5.png" alt="" width="100%" />
+            </a>
             <div class="project-box">
               <i class="bx bx-dots-vertical-rounded"></i>
               <h3>See More</h3>
@@ -264,14 +267,14 @@
               </div>
             </div>
             <div class="col">
-              <!-- <form action=""> -->
+              <!-- <form action="sendEmail.php" method="POST"> -->
                 <div class="form-control">
                   <div class="form-inputs">
-                    <input id="myForm" type="text" class="input-field" placeholder="Name" />
-                    <input id="Email" type="email" class="input-field" placeholder="Email" required/>
+                    <input name="name" id="name" type="text" class="input-field" placeholder="Name" />
+                    <input name="email" id="email" type="email" class="input-field" placeholder="Email" required/>
                   </div>
                   <div class="text-area">
-                    <textarea id="textArea" class="text-msg" placeholder="Message"></textarea>
+                    <textarea name="message" id="textArea" class="text-msg" placeholder="Message"></textarea>
                   </div>
                   <div class="form-button">
                     <button onclick="SEND()" class="btn">
@@ -359,8 +362,8 @@
           timer: 2500
         });
 
-        document.getElementById('myForm').value = '';
-        document.getElementById('Email').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
         document.getElementById('textArea').value = '';
       }
     </script>
