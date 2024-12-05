@@ -588,6 +588,8 @@ footer {
   }
   .nav-menu-btn {
     display: flex;
+    position: absolute;
+    right: 10px;
     align-items: center;
     justify-content: center;
   }
@@ -666,8 +668,9 @@ footer {
   --accent-color: #0071ff;
 }
 #theme-switch {
-  height: 50px;
-  width: 50px;
+  top: 7px;
+  height: 30px;
+  width: 30px;
   padding: 0;
   border-radius: 50%;
   display: flex;
@@ -697,7 +700,6 @@ footer {
 }
 .btn svg {
   position: fixed;
-  margin-bottom: 5px;
 }
 .text-msg {
   resize: both;
