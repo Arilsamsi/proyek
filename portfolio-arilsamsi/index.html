@@ -268,7 +268,7 @@
               </div>
             </div>
             <div class="col">
-              <!-- <form action="sendEmail.php" method="POST"> -->
+              <form name="aril-samsi-contact-person">
                 <div class="form-control">
                   <div class="form-inputs">
                     <input name="name" id="name" type="text" class="input-field" placeholder="Name" />
@@ -278,12 +278,12 @@
                     <textarea name="message" id="textArea" class="text-msg" placeholder="Message"></textarea>
                   </div>
                   <div class="form-button">
-                    <button onclick="SEND()" class="btn">
+                    <button type="submit" class="btn">
                       Send <i class="uil uil-message"></i>
                     </button>
                   </div>
                 </div>
-              <!-- </form> -->
+              </form>
             </div>
           </div>
         </section>
@@ -353,7 +353,7 @@
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       function SEND(){
         Swal.fire({
           position: "top-end",
@@ -367,6 +367,17 @@
         document.getElementById('email').value = '';
         document.getElementById('textArea').value = '';
       }
+    </script> -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzJDT95PG2UD_u2mNZifQbh-ZSXcQtUtS1Z6UImE812mmoA_6UIcx9qvyvsuOfs4w_n4w/exec'
+      const form = document.forms['aril-samsi-contact-person']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
