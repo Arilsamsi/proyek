@@ -352,32 +352,5 @@
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
-
-    <!-- <script type="text/javascript">
-      function SEND(){
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Pesan berhasil dikirim!!",
-          showConfirmButton: true,
-          timer: 3000
-        });
-
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('textArea').value = '';
-      }
-    </script> -->
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzJDT95PG2UD_u2mNZifQbh-ZSXcQtUtS1Z6UImE812mmoA_6UIcx9qvyvsuOfs4w_n4w/exec'
-      const form = document.forms['aril-samsi-contact-person']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
   </body>
 </html>

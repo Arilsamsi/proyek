@@ -130,3 +130,55 @@ themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem("darkmode");
   darkmode !== "active" ? enableDarkmode() : disabledDarkmode();
 });
+
+
+//Form Contact 
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzJDT95PG2UD_u2mNZifQbh-ZSXcQtUtS1Z6UImE812mmoA_6UIcx9qvyvsuOfs4w_n4w/exec'
+      const form = document.forms['aril-samsi-contact-person']
+    
+      form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => {
+        if (response.ok) {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Pesan berhasil dikirim!!",
+                showConfirmButton: true,
+                timer: 3000
+            });
+            form.reset();
+        } else {
+            throw new Error('Gagal mengirim pesan.');
+        }
+    })
+    .catch(error => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Pesan gagal dikirim!",
+            text: error.message,
+            showConfirmButton: true
+        });
+        console.error('Error!', error.message);
+    });
+});
+
+//End Form Contact
+
+//Event Trigger
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'Enter' && e.target.value !== 'TEXTAREA') {
+    e.preventDefault();
+    form.dispatchEvent(new Event('submit'));
+  }
+})
+
+//End Event Trigger
