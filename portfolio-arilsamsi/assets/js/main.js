@@ -133,7 +133,6 @@ themeSwitch.addEventListener("click", () => {
 
 
 //Form Contact 
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzJDT95PG2UD_u2mNZifQbh-ZSXcQtUtS1Z6UImE812mmoA_6UIcx9qvyvsuOfs4w_n4w/exec'
       const form = document.forms['aril-samsi-contact-person']
     
@@ -169,16 +168,34 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzJDT95PG2UD_u2mNZifQ
         console.error('Error!', error.message);
     });
 });
-
 //End Form Contact
 
 //Event Trigger
-
 document.addEventListener('keydown', e => {
   if(e.key === 'Enter' && e.target.value !== 'TEXTAREA') {
     e.preventDefault();
     form.dispatchEvent(new Event('submit'));
   }
 })
-
 //End Event Trigger
+
+
+// Get the button
+const backToTopButton = document.getElementById("backToTop");
+
+// Show the button when scrolling down
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
