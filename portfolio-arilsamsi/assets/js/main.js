@@ -199,3 +199,41 @@ backToTopButton.addEventListener("click", function () {
     behavior: "smooth"
   });
 });
+
+// // Fungsi untuk mengganti konten embed
+// function updateEmbed(platform) {
+//   const embedContainer = document.getElementById("sosmed-container");
+  
+//   // Bersihkan konten sebelumnya
+//   embedContainer.innerHTML = "";
+
+//   // Tambahkan embed sesuai platform
+//   if (platform === "tiktok") {
+//     embedContainer.innerHTML = `
+//      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@deyissmyluvvv" data-unique-id="deyissmyluvvv" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@deyissmyluvvv?refer=creator_embed">@deyissmyluvvv</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+//     `;
+//   } else if (platform === "instagram") {
+//     embedContainer.innerHTML = `
+// <a href="https://www.instagram.com/arilsamsi/" target="_blank">
+//   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="50">
+//   Lihat Profil Instagram
+// </a>
+
+
+//     `;
+//   } else if (platform === "facebook") {
+//     embedContainer.innerHTML = `
+//       <div id="fb-root"></div>
+//       <script async defer crossorigin="anonymous" 
+//               src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"></script>
+//       <div class="fb-post" 
+//            data-href="https://www.facebook.com/facebook/posts/10157887545481729"
+//            data-width="500"></div>
+//     `;
+//   }
+// }
+
+// // Tambahkan event listener pada tombol
+// document.getElementById("btnTiktok").addEventListener("click", () => updateEmbed("tiktok"));
+// document.getElementById("btnInstagram").addEventListener("click", () => updateEmbed("instagram"));
+// document.getElementById("btnFacebook").addEventListener("click", () => updateEmbed("facebook"));

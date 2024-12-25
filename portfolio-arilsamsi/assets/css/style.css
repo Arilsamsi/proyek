@@ -735,3 +735,19 @@ footer {
 .back-to-top button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+.sosmed-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  outline: none;
+}
+.sosmed-icon button{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
