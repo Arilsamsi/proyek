@@ -751,3 +751,23 @@ footer {
   border: none;
   cursor: pointer;
 }
+
+/* Tema Terang */
+.sosmed-icon i {
+  color: #000; /* warna ikon untuk mode terang */
+}
+
+/* Tema Gelap */
+.darkmode .sosmed-icon i {
+  color: #fff; /* warna ikon untuk mode gelap */
+}
+
+/* Mengatur warna latar belakang TikTok Embed untuk tema gelap */
+.darkmode blockquote.tiktok-embed {
+  background-color: var(--base-color);
+}
+
+/* Mengatur warna latar belakang TikTok Embed untuk tema terang */
+blockquote.tiktok-embed {
+  background-color: #fff;
+}
