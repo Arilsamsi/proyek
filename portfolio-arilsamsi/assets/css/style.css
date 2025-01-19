@@ -771,3 +771,17 @@ footer {
 blockquote.tiktok-embed {
   background-color: #fff;
 }
+#tawkchat-minified-box {
+  right: auto !important;
+  left: 20px !important; /* Atur jarak dari sisi kiri */
+}
+
+#tawkchat-minified-box.tawk-min-chat {
+  right: auto !important;
+  left: 20px !important; /* Atur jarak dari sisi kiri */
+}
+
+#tawkchat-maximized-box {
+  right: auto !important;
+  left: 20px !important; /* Atur jarak dari sisi kiri */
+}
